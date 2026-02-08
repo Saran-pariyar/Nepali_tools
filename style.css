@@ -35,18 +35,12 @@ h2 {
 }
 
 h3 {
-    background: #7c3aed;
-    width: 100%;
-    max-width: 900px;
-    text-align: center;
-    padding: 1.2rem 2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    color: white;
+    font-size: 1.5rem;
+    color: #00d4ff;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 /* Widget containers */
@@ -101,9 +95,9 @@ span[style*="color: gray"] {
     }
 
     h3 {
-        padding: 1rem 1.5rem;
-        font-size: 0.95rem;
-        max-width: 100%;
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.8rem;
     }
 }
 
@@ -114,7 +108,8 @@ span[style*="color: gray"] {
     }
 
     h3 {
-        padding: 0.8rem 1rem;
-        font-size: 0.9rem;
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.8rem;
     }
 }
