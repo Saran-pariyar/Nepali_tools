@@ -20,29 +20,22 @@ h2:first-of-type {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
-    background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #00d4ff;
     font-weight: 700;
     letter-spacing: 1px;
-    text-shadow: 0 2px 10px rgba(0, 212, 255, 0.1);
 }
 
 h2 {
     font-size: 1.8rem;
     margin-top: 3rem;
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #00d4ff;
     font-weight: 700;
     letter-spacing: 0.5px;
 }
 
 h3 {
-    background: linear-gradient(135deg, #7c3aed 0%, #00d4ff 100%);
+    background: #7c3aed;
     width: 100%;
     max-width: 900px;
     text-align: center;
@@ -53,8 +46,7 @@ h3 {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     border-radius: 8px;
-    box-shadow: 0 8px 32px rgba(124, 58, 237, 0.2), 0 0 20px rgba(0, 212, 255, 0.1);
-    transition: all 0.3s ease;
+    color: white;
 }
 
 /* Widget containers */
@@ -82,7 +74,6 @@ a {
 a:hover {
     color: #7c3aed;
     border-bottom-color: #7c3aed;
-    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
 }
 
 /* Copyright and credits text */
