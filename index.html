@@ -10,7 +10,45 @@
   <body>
     <h2>Useful Nepali widget, collected by Saran Pariyar</h2>
 
-    <h3>Nepali patro badge</h3>
+ 
+   
+  
+    <br />
+    <div id="nepali-date-display" style="font-size: 24px; font-weight: bold; color: #d4503f;">
+      Loading Nepali date...
+    </div>
+    <script>
+      fetch("https://calendar.bloggernepal.com/api/today")
+        .then(response => response.json())
+        .then(data => {
+          const todayObj = data.res.days.find(day => day.tag === "today");
+          
+          const pad = num => num.toString().padStart(2, "0");
+          
+          const nepaliDigits = { "०": "0", "१": "1", "२": "2", "३": "3", "४": "4", "५": "5", "६": "6", "७": "7", "८": "8", "९": "9" };
+          const convertNepaliToEnglish = str => str.replace(/[०-९]/g, d => nepaliDigits[d]);
+          
+          const bsYear = convertNepaliToEnglish(data.res.year);
+          
+          // Map Nepali month names to BS month numbers
+          const monthMap = {
+            "बैशाख": "01", "जेठ": "02", "आषाढ": "03", "श्रावण": "04",
+            "भाद्र": "05", "आश्विन": "06", "कार्तिक": "07", "मंसिर": "08",
+            "पौष": "09", "माघ": "10", "फाल्गुन": "11", "चैत्र": "12"
+          };
+          
+          const bsMonth = monthMap[data.res.name];
+          const bsDay = pad(convertNepaliToEnglish(todayObj.bs));
+          
+          const nepaliDateFormatted = `${bsYear}-${bsMonth}-${bsDay}th`;
+          document.getElementById("nepali-date-display").textContent = nepaliDateFormatted;
+        })
+        .catch(err => {
+          console.error(err);
+          document.getElementById("nepali-date-display").textContent = "Error loading date";
+        });
+    </script>
+      <h3>Nepali patro badge</h3>
     <br />
     <!-- Start of nepali patro badge -->
     <script type="text/javascript">
@@ -34,7 +72,6 @@
       >
     </div>
     <!-- End of nepali patro badge -->
-   
     <h3>Upcoming nepali events</h3>
     <br />
 
@@ -124,7 +161,7 @@
       src="https://nepalipatro.com.np/np-widgets/nepalipatro.js"
       id="wiz1"
     ></script>
-    <h3>Show upcoming nepali holidays</h3>
+    
     <br />
 
     <!-- date converter  -->
